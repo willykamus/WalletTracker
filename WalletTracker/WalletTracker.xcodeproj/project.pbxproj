@@ -15,6 +15,13 @@
 		1C588CFA25085B3700A3BDCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C588CF825085B3700A3BDCB /* LaunchScreen.storyboard */; };
 		1C588D0525085B3700A3BDCB /* WalletTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D0425085B3700A3BDCB /* WalletTrackerTests.swift */; };
 		1C588D1025085B3700A3BDCB /* WalletTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D0F25085B3700A3BDCB /* WalletTrackerUITests.swift */; };
+		1C588D1F25085BC700A3BDCB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D1E25085BC700A3BDCB /* Transaction.swift */; };
+		1C588D2125085BD900A3BDCB /* TransactionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D2025085BD900A3BDCB /* TransactionTest.swift */; };
+		1C588D2325086E0C00A3BDCB /* SumTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D2225086E0C00A3BDCB /* SumTransactions.swift */; };
+		1C588D2525092C5A00A3BDCB /* SumTransactionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D2425092C5A00A3BDCB /* SumTransactionsTest.swift */; };
+		1C588D2825092D0900A3BDCB /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D2725092D0800A3BDCB /* TransactionRepository.swift */; };
+		1C588D2A25092D5200A3BDCB /* TransactionGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D2925092D5200A3BDCB /* TransactionGateway.swift */; };
+		1C588D2C25092F4B00A3BDCB /* TransactionRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C588D2B25092F4B00A3BDCB /* TransactionRepositoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		1C588D0B25085B3700A3BDCB /* WalletTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C588D0F25085B3700A3BDCB /* WalletTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTrackerUITests.swift; sourceTree = "<group>"; };
 		1C588D1125085B3700A3BDCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C588D1E25085BC700A3BDCB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		1C588D2025085BD900A3BDCB /* TransactionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTest.swift; sourceTree = "<group>"; };
+		1C588D2225086E0C00A3BDCB /* SumTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumTransactions.swift; sourceTree = "<group>"; };
+		1C588D2425092C5A00A3BDCB /* SumTransactionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumTransactionsTest.swift; sourceTree = "<group>"; };
+		1C588D2725092D0800A3BDCB /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		1C588D2925092D5200A3BDCB /* TransactionGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionGateway.swift; sourceTree = "<group>"; };
+		1C588D2B25092F4B00A3BDCB /* TransactionRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,8 @@
 		1C588CEC25085B3600A3BDCB /* WalletTracker */ = {
 			isa = PBXGroup;
 			children = (
+				1C588D2625092CEC00A3BDCB /* MockData */,
+				1C588D1D25085BA900A3BDCB /* Transaction */,
 				1C588CED25085B3600A3BDCB /* AppDelegate.swift */,
 				1C588CEF25085B3600A3BDCB /* SceneDelegate.swift */,
 				1C588CF125085B3600A3BDCB /* ContentView.swift */,
@@ -121,8 +137,11 @@
 		1C588D0325085B3700A3BDCB /* WalletTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				1C588D2025085BD900A3BDCB /* TransactionTest.swift */,
 				1C588D0425085B3700A3BDCB /* WalletTrackerTests.swift */,
 				1C588D0625085B3700A3BDCB /* Info.plist */,
+				1C588D2425092C5A00A3BDCB /* SumTransactionsTest.swift */,
+				1C588D2B25092F4B00A3BDCB /* TransactionRepositoryTest.swift */,
 			);
 			path = WalletTrackerTests;
 			sourceTree = "<group>";
@@ -134,6 +153,24 @@
 				1C588D1125085B3700A3BDCB /* Info.plist */,
 			);
 			path = WalletTrackerUITests;
+			sourceTree = "<group>";
+		};
+		1C588D1D25085BA900A3BDCB /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				1C588D1E25085BC700A3BDCB /* Transaction.swift */,
+				1C588D2225086E0C00A3BDCB /* SumTransactions.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		1C588D2625092CEC00A3BDCB /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				1C588D2725092D0800A3BDCB /* TransactionRepository.swift */,
+				1C588D2925092D5200A3BDCB /* TransactionGateway.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +306,11 @@
 			files = (
 				1C588CEE25085B3600A3BDCB /* AppDelegate.swift in Sources */,
 				1C588CF025085B3600A3BDCB /* SceneDelegate.swift in Sources */,
+				1C588D2825092D0900A3BDCB /* TransactionRepository.swift in Sources */,
+				1C588D1F25085BC700A3BDCB /* Transaction.swift in Sources */,
+				1C588D2A25092D5200A3BDCB /* TransactionGateway.swift in Sources */,
 				1C588CF225085B3600A3BDCB /* ContentView.swift in Sources */,
+				1C588D2325086E0C00A3BDCB /* SumTransactions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C588D2C25092F4B00A3BDCB /* TransactionRepositoryTest.swift in Sources */,
+				1C588D2125085BD900A3BDCB /* TransactionTest.swift in Sources */,
 				1C588D0525085B3700A3BDCB /* WalletTrackerTests.swift in Sources */,
+				1C588D2525092C5A00A3BDCB /* SumTransactionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
